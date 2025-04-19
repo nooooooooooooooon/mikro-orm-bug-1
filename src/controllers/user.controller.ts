@@ -9,18 +9,6 @@ export class UserController {
     readonly userService: UserService
   ) {}
 
-  // @Get(':id')
-  // async findOne(@Param('id') id: string, @Query('lang') lang = 'en') {
-  //   // Will automatically handle User → Profile → Phone translations
-  //   return this.userService.findOne(id, lang, { populate: ['profile', 'profile.phones'] });
-  // }
-
-  // @Get()
-  // async findAll(@Query('lang') lang = 'en') {
-  //   // Returns all users with their profiles and phones translated
-  //   return this.userService.findAll(lang, {}, { populate: ['profile', 'profile.phones'] });
-  // }
-
   @Get(':id')
   async findOne(
     @Param('id') id: string,
